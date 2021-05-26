@@ -11,11 +11,7 @@ public class Main {
 
     public static boolean checkNumbers(int a, int b) {
         int result = a + b;
-        if (result >= 10 && result <= 20) {
-            return true;
-        } else {
-            return false;
-        }
+        return  (result >= 10 && result <= 20);
     }
 
     public static void whatNumber(int a) {

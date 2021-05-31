@@ -61,23 +61,19 @@ public class Main {
 
     public static void createSquareArray() {
         int length = 5;
-
         int[][] arr = new int[length][length];
         for (int i = 0; i < length; i++) {
-            for (int j = 0; j < length; j++) {
-                if ((i == j) || (i == length - 1 - j)) {
-                    arr[i][j] = 1;
-                }
-            }
+            arr[i][i] = 1;
+            arr[i][length - i - 1] = 1;
         }
         showArray(arr);
     }
 
-    private static void showArray( int[][] arr){
+    private static void showArray(int[][] arr){
         for (int i = 0; i < arr.length; i++) {
-        for (int j = 0; j < arr.length; j++) {
-            System.out.print(arr[i][j] + " ");
-        }
+            for (int j = 0; j < arr.length; j++) {
+              System.out.print(arr[i][j] + " ");
+            }
         System.out.println();
         }
     }
